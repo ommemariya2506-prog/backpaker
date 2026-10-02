@@ -1,0 +1,375 @@
+/* ==========================================
+     Backpacker Travel Website
+     style.css
+     ========================================= */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f8ff;
+    color: #222;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* ==========================
+     Navbar
+     ========================= */
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #00d4ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00c3ff;
+}
+
+.login-btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(90deg, #007bff, #00bfff);
+    transition: 0.4s;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* ==========================
+     Hero Section
+     ========================= */
+.hero {
+    min-height: 100vh;
+    background: url("images/hero.jpg") center/cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 75px;
+}
+
+.hero-content p {
+    margin: 25px 0;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+/* ==========================
+     Buttons
+     ========================= */
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(90deg, #0072ff, #00d4ff);
+    transition: 0.4s;
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.35);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #0072ff;
+}
+
+/* ==========================
+     Glass Card
+     ========================= */
+.glass {
+    backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================
+     Hero Booking Card
+     ========================= */
+.booking-card {
+    position: absolute;
+    right: 8%;
+    top: 18%;
+    width: 350px;
+    padding: 35px;
+    color: white;
+}
+
+.booking-card h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.booking-card p {
+    opacity: 0.9;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.booking-card button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #007bff;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* ==========================
+     Statistics
+     ========================= */
+.stats {
+    margin-top: -70px;
+    position: relative;
+    z-index: 10;
+}
+
+.stats-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 34px;
+    color: #007bff;
+}
+
+.stat p {
+    color: #777;
+    margin-top: 10px;
+}
+
+/* ==========================
+     Section Title
+     ========================= */
+.section-title {
+    text-align: center;
+    margin: 90px 0 50px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.section-title p {
+    color: #777;
+    margin-top: 15px;
+}
+
+/* ==========================
+     Destination Grid & Cards
+     ========================= */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.card-content h4 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.card-content .btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 15px;
+    margin-right: 0;
+}
+
+/* ==========================
+     Footer
+     ========================= */
+footer {
+    background: #111;
+    color: #fff;
+    margin-top: 80px;
+}
+
+footer p {
+    color: #aaa;
+}
+
+/* ==========================
+     Responsive Design
+     ========================= */
+@media (max-width: 991px) {
+    .hero-content h1 {
+        font-size: 48px;
+        line-height: 55px;
+    }
+    .booking-card {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .stats-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* In a real app, you would add a hamburger menu */
+    }
+    .hero-content h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    .stats-box {
+        grid-template-columns: 1fr;
+    }
+}
